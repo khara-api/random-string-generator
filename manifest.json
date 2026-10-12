@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "ランダム文字列ジェネレーター",
+  "version": "1.0.0",
+  "description": "アイコンをクリックすると、ランダム文字列を生成するページを開きます。",
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "ランダム文字列ジェネレーター"
+  }
+}

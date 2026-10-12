@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ランダム文字列ジェネレーター</title>
+  <link rel="stylesheet" href="generator.css">
+</head>
+<body>
+  <main class="card">
+    <h1>ランダム文字列ジェネレーター</h1>
+
+    <section class="options">
+      <div class="row">
+        <label for="length">文字列の長さ</label>
+        <input type="number" id="length" min="1" max="256" value="16">
+      </div>
+
+      <div class="row checkbox-row">
+        <input type="checkbox" id="useSymbols" checked>
+        <label for="useSymbols">特殊文字を含める</label>
+      </div>
+
+      <h2>最低限含める文字数</h2>
+      <div class="row">
+        <label for="minUpper">大文字 (A-Z)</label>
+        <input type="number" id="minUpper" min="0" value="1">
+      </div>
+      <div class="row">
+        <label for="minLower">小文字 (a-z)</label>
+        <input type="number" id="minLower" min="0" value="1">
+      </div>
+      <div class="row">
+        <label for="minDigit">数字 (0-9)</label>
+        <input type="number" id="minDigit" min="0" value="1">
+      </div>
+      <div class="row" id="symbolRow">
+        <label for="minSymbol">特殊文字 (<span class="mono">!@#$%…</span>)</label>
+        <input type="number" id="minSymbol" min="0" value="1">
+      </div>
+    </section>
+
+    <p id="error" class="error" role="alert" hidden></p>
+
+    <div class="buttons">
+      <button id="generateBtn" class="primary">生成する</button>
+    </div>
+
+    <div class="output">
+      <input type="text" id="result" readonly placeholder="ここに生成結果が表示されます" aria-label="生成された文字列">
+      <button id="copyBtn">コピー</button>
+    </div>
+    <p id="status" class="status" aria-live="polite"></p>
+  </main>
+
+  <script src="generator.js"></script>
+</body>
+</html>
